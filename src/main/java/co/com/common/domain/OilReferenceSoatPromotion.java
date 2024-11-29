@@ -1,5 +1,6 @@
 package co.com.common.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,18 +19,19 @@ public class OilReferenceSoatPromotion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-    @JoinColumn(name = "oil_reference_id")
+    @ManyToOne
+    @JoinColumn(name = "soat_promotional_uses_id", nullable = true)
+    @JsonIgnore
+    private SoatPromotionalUses soatPromotionUses;
+
+    @ManyToOne
+    @JoinColumn(name = "oil_reference_id", nullable = true)
     private OilReference oilReference;
 
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-    @JoinColumn(name = "viscosity_id")
+    @ManyToOne
+    @JoinColumn(name = "viscosity_id", nullable = true)
     private Viscosity viscosity;
 
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-    @JoinColumn(name = "soat_promotional_uses_id")
-    private SoatPromotionalUses soatPromotion;
-
-    @Column(name = "liters_quantity_union", nullable = false)
+    @Column(name = "liters_quantity_union", nullable = true)
     private Float litersQuantityUnion;
 }

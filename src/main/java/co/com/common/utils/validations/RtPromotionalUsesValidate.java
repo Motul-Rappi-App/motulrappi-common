@@ -6,6 +6,7 @@ public class RtPromotionalUsesValidate {
 
     public static final String COMMERCE_NOT_NULL = "El comercio de la promoción para Rappi Tenderos no puede ser nulo";
     public static final String COMMERCE_NOT_FOUND = "El comercio de la promoción para Rappi Tenderos con ID %s no fue encontrado";
+    public static final String COMMERCE_ID_NOT_NULL = "El id del comercio no puede ser nulo";
 
     public static final String RAPPI_COURIER_NOT_NULL = "El mensajero de la promoción para Rappi Tenderos no puede ser nulo";
     public static final String RAPPI_COURIER_NOT_FOUND = "El mensajero de la promoción para Rappi Tenderos con ID %s no fue encontrado";

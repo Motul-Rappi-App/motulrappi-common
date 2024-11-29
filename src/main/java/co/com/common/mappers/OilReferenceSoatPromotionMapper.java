@@ -20,7 +20,7 @@ public class OilReferenceSoatPromotionMapper {
                 .id(oilReferenceSoatPromotion.getId())
                 .oilReference(OilReferenceMapper.toOilReferenceResponseDto(oilReferenceSoatPromotion.getOilReference()))
                 .viscosity(ViscosityMapper.toViscosityResponseDto(oilReferenceSoatPromotion.getViscosity()))
-                .soatPromotion(SoatPromotionalUsesMapper.toSoatPromotionalUsesResponseDto(oilReferenceSoatPromotion.getSoatPromotion()))
+                .soatPromotion(SoatPromotionalUsesMapper.toSoatPromotionalUsesResponseDto(oilReferenceSoatPromotion.getSoatPromotionUses()))
                 .litersQuantityUnion(oilReferenceSoatPromotion.getLitersQuantityUnion())
                 .build();
     }

@@ -13,6 +13,9 @@ import lombok.Data;
 @Data
 public class RtPromotionalUsesRequestDto {
 
+    @NotNull(message = RtPromotionalUsesValidate.COMMERCE_ID_NOT_NULL)
+    private Long commerceId;
+
     @NotNull(message = RtPromotionalUsesValidate.RAPPI_COURIER_NOT_NULL)
     private Long rappiCourierId;
 

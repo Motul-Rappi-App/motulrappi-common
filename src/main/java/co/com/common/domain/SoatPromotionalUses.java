@@ -1,5 +1,6 @@
 package co.com.common.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,15 +28,16 @@ public class SoatPromotionalUses {
     @JoinColumn(name = "commerce_id")
     private Commerce commerce;
 
-    @Column(name= "quantity_liters", nullable = false)
+    @Column(name= "quantity_liters", nullable = true)
     private Float quantityLiters;
 
     @Column(name = "inscription_date", nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Timestamp inscriptionDate;
 
-    @OneToMany(mappedBy = "soatPromotion", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<OilReferenceSoatPromotion> oilReferences;
+//    @OneToMany(mappedBy = "soatPromotionUses", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @JsonIgnore
+//    private List<OilReferenceSoatPromotion> oilReferences;
 
     @PrePersist
     public void onCreate () {

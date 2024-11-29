@@ -24,8 +24,6 @@ public class OilReferenceUpdateRequestDto {
     @NotNull(message = OilReferenceValidate.VISCOSITIES_NOT_EMPTY)
     private Long[] viscosities;
 
-    @NotNull(message = OilReferenceValidate.LITERS_QUANTITY_NOT_EMPTY)
-    @Pattern(regexp = OilReferenceValidate.LITERS_QUANTITY_REGEX, message = OilReferenceValidate.LITERS_QUANTITY_NOT_VALID)
     private Float litersQuantity;
 
     @NotNull(message = OilReferenceValidate.ACTIVE_FOR_RAPPI_COURIER_NOT_EMPTY)

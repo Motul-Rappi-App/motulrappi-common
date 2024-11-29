@@ -6,7 +6,7 @@ public class OilReferenceValidate {
 
     public static final String NAME_NOT_EMPTY = "El nombre de la referencia del aceite no puede ser nulo o vacío";
     public static final String NAME_NOT_VALID = "El nombre de la referencia del aceite no es válido";
-    public static final String NAME_REGEX = "^[A-Za-zÁÉÍÓÚáéíóú0-9\\s-]{1,50}$";
+    public static final String NAME_REGEX = "^[\\s\\S]{1,10}$\n";
 
     public static final String OIL_REFERENCE_NOT_FOUND = "La referencia del aceite con ID %s no fue encontrada";
     public static final String OIL_REFERENCE_NOT_FOUND_BY_NAME = "La referencia del aceite con nombre %s no fue encontrada";
