@@ -18,6 +18,7 @@ public class OilReferenceSoatPromotion {
 
     @ManyToOne
     @JoinColumn(name = "soat_promotional_uses_id", nullable = true)
+    @JsonIgnore
     private SoatPromotionalUses soatPromotionUses;
 
     @ManyToOne
