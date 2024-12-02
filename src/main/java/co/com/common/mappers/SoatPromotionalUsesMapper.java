@@ -19,7 +19,7 @@ public class SoatPromotionalUsesMapper {
                 .inscriptionDate(soatPromotionalUses.getInscriptionDate())
                 .quantityLiters(soatPromotionalUses.getQuantityLiters())
                 .identification(soatPromotionalUses.getIdentification())
-//                .oilReference(OilReferenceSoatPromotionMapper.toOilReferenceSoatPromotionResponseDtoSlice(soatPromotionalUses.getOilReferences()))
+                .oilReference(OilReferenceSoatPromotionMapper.toOilReferenceSoatPromotionResponseDtoList(soatPromotionalUses.getOilReferences()))
                 .commerce(CommerceMapper.toCommerceResponseDto(soatPromotionalUses.getCommerce()))
                 .build();
     }

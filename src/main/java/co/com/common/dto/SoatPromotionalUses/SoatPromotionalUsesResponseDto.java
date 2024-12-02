@@ -21,5 +21,5 @@ public class SoatPromotionalUsesResponseDto {
     private CommerceResponseDto commerce;
     private Float quantityLiters;
     private Timestamp inscriptionDate;
-    private Slice<OilReferenceSoatPromotionResponseDto> oilReference;
+    private List<OilReferenceSoatPromotionResponseDto> oilReference;
 }

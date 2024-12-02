@@ -2,10 +2,7 @@ package co.com.common.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 @AllArgsConstructor
@@ -21,7 +18,6 @@ public class OilReferenceSoatPromotion {
 
     @ManyToOne
     @JoinColumn(name = "soat_promotional_uses_id", nullable = true)
-    @JsonIgnore
     private SoatPromotionalUses soatPromotionUses;
 
     @ManyToOne
