@@ -17,17 +17,17 @@ public class OilReferenceSoatPromotion {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "soat_promotional_uses_id", nullable = true)
+    @JoinColumn(name = "soat_promotional_uses_id", nullable = false)
     private SoatPromotionalUses soatPromotionUses;
 
     @ManyToOne
-    @JoinColumn(name = "oil_reference_id", nullable = true)
+    @JoinColumn(name = "oil_reference_id", nullable = false)
     private OilReference oilReference;
 
     @ManyToOne
-    @JoinColumn(name = "viscosity_id", nullable = true)
+    @JoinColumn(name = "viscosity_id", nullable = false)
     private Viscosity viscosity;
 
-    @Column(name = "liters_quantity_union", nullable = true)
+    @Column(name = "liters_quantity_union", nullable = false)
     private Float litersQuantityUnion;
 }

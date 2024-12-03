@@ -2,6 +2,7 @@ package co.com.common.mappers;
 
 import co.com.common.domain.OilReference;
 import co.com.common.domain.OilReferenceSoatPromotion;
+import co.com.common.domain.SoatPromotionalUses;
 import co.com.common.domain.Viscosity;
 import co.com.common.dto.OilReferenceSoatPromotion.OilReferenceSoatPromotionCreateDto;
 import co.com.common.dto.OilReferenceSoatPromotion.OilReferenceSoatPromotionRequestDto;
@@ -17,11 +18,12 @@ import java.util.stream.Collectors;
 
 public class OilReferenceSoatPromotionMapper {
 
-    public static OilReferenceSoatPromotion toOilReferenceSoatPromotion(OilReferenceSoatPromotionCreateDto oilReferenceSoatPromotionCreateDto){
+    public static OilReferenceSoatPromotion toOilReferenceSoatPromotion(OilReferenceSoatPromotionCreateDto oilReferenceSoatPromotionCreateDto, SoatPromotionalUses soatPromotionalUses){
         return OilReferenceSoatPromotion.builder()
                 .oilReference(oilReferenceSoatPromotionCreateDto.getOilReference())
                 .viscosity(oilReferenceSoatPromotionCreateDto.getViscosity())
                 .litersQuantityUnion(oilReferenceSoatPromotionCreateDto.getLitersQuantityUnion())
+                .soatPromotionUses(soatPromotionalUses)
                 .build();
     }
 
