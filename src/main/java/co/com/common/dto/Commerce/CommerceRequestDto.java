@@ -14,7 +14,7 @@ import lombok.Data;
 public class CommerceRequestDto {
     @NotBlank(message = CommerceValidate.NIT_NOT_EMPTY)
     @Size(min = 1, max = 20, message = CommerceValidate.NIT_SIZE)
-//    @Pattern(regexp = CommerceValidate.NIT_REGEX, message = CommerceValidate.NIT_NOT_VALID)
+    @Pattern(regexp = CommerceValidate.NIT_REGEX, message = CommerceValidate.NIT_NOT_VALID)
     private String nit;
 
     @NotBlank(message = CommerceValidate.NAME_NOT_EMPTY)

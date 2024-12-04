@@ -2,6 +2,7 @@ package co.com.common.dto.Admin;
 
 import co.com.common.utils.validations.AdminValidate;
 
+import co.com.common.utils.validations.CommerceValidate;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -26,4 +27,7 @@ public class AdminRequestDto {
     @NotBlank(message = AdminValidate.PASSWORD_NOT_EMPTY)
     @Pattern(regexp = AdminValidate.PASSWORD_REGEX, message = AdminValidate.PASSWORD_NOT_VALID)
     private String password;
+
+    @NotNull(message = AdminValidate.SUPER_ADMIN_NOT_NULL)
+    private boolean superAdmin;
 }

@@ -17,6 +17,7 @@ public class AdminMapper {
                 .id(admin.getId())
                 .name(admin.getName())
                 .credential(CredentialMapper.toCredentialResponseDto(admin.getCredential()))
+                .superAdmin(admin.isSuperAdmin())
                 .build();
     }
 
@@ -27,12 +28,14 @@ public class AdminMapper {
                 .id(admin.getId())
                 .name(admin.getName())
                 .credential(CredentialMapper.toCredentialResponseDto(admin.getCredential()))
+                .superAdmin(admin.isSuperAdmin())
                 .build();
     }
 
     public static Admin toAdmin(AdminRequestDto adminRequestDto) {
         return Admin.builder()
                 .name(adminRequestDto.getName())
+                .superAdmin(adminRequestDto.isSuperAdmin())
                 .build();
     }
 

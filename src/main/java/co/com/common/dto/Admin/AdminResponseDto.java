@@ -13,4 +13,5 @@ public class AdminResponseDto {
     private Long id;
     private String name;
     private CredentialResponseDto credential;
+    private boolean superAdmin;
 }

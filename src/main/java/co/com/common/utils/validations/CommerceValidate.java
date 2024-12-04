@@ -5,9 +5,9 @@ public class CommerceValidate {
     public static final String ID_NOT_NULL = "El ID del comercio no puede ser nulo";
 
     public static final String NIT_NOT_EMPTY = "El NIT del comercio no puede ser nulo o vacío";
-    public static final String NIT_NOT_VALID = "El NIT del comercio no es válido";
+    public static final String NIT_NOT_VALID = "El NIT del comercio no debe tener espacios o caracteres especiales";
     public static final String NIT_SIZE = "El NIT del comercio debe tener entre 1 y 20 caracteres";
-    public static final String NIT_REGEX = "\\b[0-9]{10}\\b";
+    public static final String NIT_REGEX = "^[a-zA-Z0-9 ]*$";
 
     public static final String EMAIL_NOT_EMPTY = "El correo electrónico del comercio no puede ser nulo o vacío";
     public static final String EMAIL_NOT_VALID = "El correo electrónico del comercio no es válido";

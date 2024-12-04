@@ -24,4 +24,7 @@ public class Admin {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "credential_id", referencedColumnName = "id")
     private Credential credential;
+
+    @Column(name ="super_admin", nullable = false)
+    private boolean superAdmin = false;
 }

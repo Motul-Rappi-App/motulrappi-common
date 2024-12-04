@@ -16,4 +16,6 @@ public class AdminValidate {
     public static final String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
 
     public static final String ADMIN_NOT_FOUND = "El administrador con ID %s no fue encontrado";
+
+    public static final String SUPER_ADMIN_NOT_NULL = "El campo superAdmin no puede ser nulo";
 }
