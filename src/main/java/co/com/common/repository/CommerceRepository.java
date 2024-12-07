@@ -12,5 +12,6 @@ public interface CommerceRepository extends JpaRepository<Commerce, Long> {
     Slice<Commerce> findAllByAdmin_Id(Long id, Pageable pageable);
     boolean existsByName(String name);
     boolean existsByAdmin_Id(Long id);
+    boolean existsByNit(String nit);
     Commerce findByCredential_Id(Long id);
 }

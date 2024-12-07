@@ -22,6 +22,7 @@ public class CommerceValidate {
 
     public static final String COMMERCE_NOT_FOUND = "El comercio con ID %s no fue encontrado";
     public static final String COMMERCE_ALREADY_EXISTS = "El comercio con nombre %s ya se encuentra registrado";
+    public static final String NIT_ALREADY_EXISTS = "El NIT de comercio ya se ha usado en otro";
 
     public static final String LOCATION_NOT_NULL = "La ubicación del comercio no puede ser nula";
     public static final String LOCATION_NOT_FOUND = "La ubicación del comercio con ID %s no fue encontrada";
