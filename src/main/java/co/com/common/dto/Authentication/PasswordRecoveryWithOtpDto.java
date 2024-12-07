@@ -17,6 +17,14 @@ public class PasswordRecoveryWithOtpDto {
   @NotBlank(message = AuthenticationValidate.PASSWORD_NOT_EMPTY)
   @Pattern(regexp = AuthenticationValidate.PASSWORD_REGEX, message = AuthenticationValidate.PASSWORD_NOT_VALID)
   private String newPassword;
+
+  public String getOtp() {
+    return otp;
+  }
+
+  public String getNewPassword() {
+    return newPassword;
+  }
 }
 
 
