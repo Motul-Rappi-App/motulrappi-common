@@ -16,6 +16,7 @@ public class RtPromotionalUsesValidate {
 
     public static final String VISCOSITY_NOT_NULL = "La viscosidad de la promoción para Rappi Tenderos no puede ser nula o vacía";
     public static final String VISCOSITY_NOT_FOUND = "La viscosidad de la promoción para Rappi Tenderos con ID %s no fue encontrada";
+    public static final String VISCOSITY_NOT_RELATED = "La viscosidad de la promoción para Rappi Tenderos no está relacionada con la referencia de aceite";
 
     public static final String QUANTITY_LITERS_NOT_NULL = "La cantidad de litros de la promoción para Rappi Tenderos no puede ser nula";
     public static final String QUANTITY_LITERS_INVALID = "El campo quantityLiters es inválido (debe ser 1 o 2)";
