@@ -10,7 +10,7 @@ public class AuthenticationValidate {
     public static final String PASSWORD_NOT_VALID = "La contraseña no es válida, debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número";
     public static final String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
 
-    public static final String CREDENTIAL_NOT_FOUND = "Las credenciales no fueron encontradas";
+    public static final String CREDENTIAL_NOT_FOUND = "No se encontró el correo electrónico";
     public static final String CREDENTIAL_INCORRECT_PASSWORD = "La contraseña es incorrecta";
 
     public static final String TOKEN_NOT_VALID = "El token no es válido";

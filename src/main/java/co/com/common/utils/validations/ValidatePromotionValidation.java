@@ -6,10 +6,10 @@ import java.time.LocalDateTime;
 public class ValidatePromotionValidation {
     public static final String IDENTIFICATION_NOT_EMPTY = "La identificacion no puede ser nula o vacía";
 
-    public static final String IDENTIFICATION_NOT_FOUND = "El numero de cedula %s no esta registrado para promocion, ¿se trata de un Rappi Tendero? inscribelo";
+    public static final String IDENTIFICATION_NOT_FOUND = "El número de cédula %s no está registrado para promoción, ¿Se trata de un Rappi Tendero? ¡Inscríbelo!";
 
     public static final String SOAT_PROMOTION_VALID = "Felicitaciones, al consumidor final; la cédula es apta para obtener un descuento del 20%%.";
-    public static final String SOAT_PROMOTION_INVALID_FOR_USE = "Esta cédula ya fue redimida por el consumidor final; lastimosamente no aplica el descuento.";
+    public static final String SOAT_PROMOTION_INVALID_FOR_USE = "Esta cédula ya fue redimida por el consumidor final; lastimosamente, no aplica el descuento.";
     public static final String SOAT_PROMOTION_TIME_LIMIT_INVALID = "La promoción para consumidores finales ha caducado.";
     public static final LocalDateTime SOAT_PROMOTION_TIME_LIMIT = LocalDateTime.of(2025, 3, 30, 0, 0);
 

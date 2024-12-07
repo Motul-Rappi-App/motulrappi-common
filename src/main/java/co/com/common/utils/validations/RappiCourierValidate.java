@@ -11,7 +11,7 @@ public class RappiCourierValidate {
     public static final String FULL_NAME_REGEX = "^[a-zA-Z ]{3,50}$";
 
     public static final String RAPPI_TOKEN_NOT_EMPTY = "El token del Rappi tendero no puede ser nulo o vacío";
-    public static final String RAPPI_TOKEN_ALREADY_EXISTS = "El Rappi token %s ya se encuentra registrado o ya se usó";
+    public static final String RAPPI_TOKEN_ALREADY_EXISTS = "El Rappi ID %s ya se encuentra registrado o ya se usó";
 
     public static final String COMMERCE_NOT_NULL = "El comercio del Rappi tendero no puede ser nulo";
     public static final String COMMERCE_NOT_FOUND = "El comercio con ID %s no fue encontrado";
