@@ -1,6 +1,8 @@
 package co.com.common.utils.validations;
 
 
+import java.time.LocalDateTime;
+
 public class ValidatePromotionValidation {
     public static final String IDENTIFICATION_NOT_EMPTY = "La identificacion no puede ser nula o vacía";
 
@@ -8,6 +10,8 @@ public class ValidatePromotionValidation {
 
     public static final String SOAT_PROMOTION_VALID = "Felicitaciones, al consumidor final; la cédula es apta para obtener un descuento del 20%%.";
     public static final String SOAT_PROMOTION_INVALID_FOR_USE = "Esta cédula ya fue redimida por el consumidor final; lastimosamente no aplica el descuento.";
+    public static final String SOAT_PROMOTION_TIME_LIMIT_INVALID = "La promoción para consumidores finales ha caducado.";
+    public static final LocalDateTime SOAT_PROMOTION_TIME_LIMIT = LocalDateTime.of(2025, 3, 30, 0, 0);
 
     public static final long RT_PROMOTION_DAYS_MIN = 10;
     public static final String RT_PROMOTION_VALID_FIRST_USE = "Felicitaciones al Rappi Tendero por su primera vez usando la promoción. Es apto para recibir un descuento del 10%%";
