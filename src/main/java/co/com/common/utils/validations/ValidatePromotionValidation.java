@@ -4,7 +4,7 @@ package co.com.common.utils.validations;
 import java.time.LocalDateTime;
 
 public class ValidatePromotionValidation {
-    public static final String IDENTIFICATION_NOT_EMPTY = "La identificacion no puede ser nula o vacía";
+    public static final String IDENTIFICATION_NOT_EMPTY = "La identificación no puede ser nula o vacía";
 
     public static final String IDENTIFICATION_NOT_FOUND = "El número de cédula %s no está registrado para promoción, ¿Se trata de un Rappi Tendero? ¡Inscríbelo!";
 
@@ -17,7 +17,7 @@ public class ValidatePromotionValidation {
     public static final String RT_PROMOTION_VALID_FIRST_USE = "Felicitaciones al Rappi Tendero por su primera vez usando la promoción. Es apto para recibir un descuento del 10%%";
     public static final String RT_PROMOTION_VALID_WITH_TIME = "Felicitaciones, aplica para la promoción un descuento del 10%%. Rappi Tendero puede redimirla de nuevo en %s días.";
     public static final String RT_PROMOTION_INVALID_WITH_TIME = "No aplica para promoción; no han pasado %s días desde el último uso, la última vez fue el día %s.";
-    public static final String RT_PROMOTION_ERROR_WITH_DATE = "Error al obtener fechas del uso de la promocion";
+    public static final String RT_PROMOTION_ERROR_WITH_DATE = "Error al obtener fechas del uso de la promoción";
 
     public static final String SAVE_IN_RT_PROMOTION_USES = "RT_PROMOTION_USES";
     public static final String SAVE_IN_SOAT_PROMOTION_USES = "SOAT_PROMOTION_USES";
