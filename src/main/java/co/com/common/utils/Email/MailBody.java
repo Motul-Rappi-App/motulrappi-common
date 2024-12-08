@@ -1,4 +1,4 @@
-package co.com.common.dto.Email;
+package co.com.common.utils.Email;
 
 import lombok.Builder;
 

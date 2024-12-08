@@ -12,6 +12,8 @@ public class CredentialValidate {
     public static final String PASSWORD_NOT_VALID = "La contraseña de la credencial no es válida";
     public static final String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$";
 
+    public static final String PASSWORD_NOT_MATCH = "Las contraseñas no coinciden";
+
     public static final String ROL_USUARIO_NOT_NULL = "El rol del usuario no puede ser nulo";
 
     public static final String CREDENTIAL_NOT_FOUND = "La credencial con el ID %s no fue encontrada";
