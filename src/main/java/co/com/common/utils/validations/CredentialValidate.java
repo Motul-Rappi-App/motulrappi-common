@@ -14,6 +14,8 @@ public class CredentialValidate {
 
     public static final String PASSWORD_NOT_MATCH = "Las contraseñas no coinciden";
 
+    public static final String PASSWORD_CHANGED = "La contraseña de la credencial ha sido cambiada";
+
     public static final String ROL_USUARIO_NOT_NULL = "El rol del usuario no puede ser nulo";
 
     public static final String CREDENTIAL_NOT_FOUND = "La credencial con el ID %s no fue encontrada";
