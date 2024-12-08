@@ -43,6 +43,10 @@ public class Credential implements UserDetails {
     @JsonIgnore
     private Commerce commerce;
 
+    @OneToOne(mappedBy = "credential")
+    @JsonIgnore
+    private ForgotPassword forgotPassword;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(this.userRole.name()));

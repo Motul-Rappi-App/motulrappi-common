@@ -14,6 +14,4 @@ public class AuthenticationValidate {
     public static final String CREDENTIAL_INCORRECT_PASSWORD = "La contraseña es incorrecta";
 
     public static final String TOKEN_NOT_VALID = "El token no es válido";
-
-    public static final String OTP_NOT_EMPTY = "El código de verificación no puede ser nulo o vacío";
 }
