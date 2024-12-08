@@ -30,4 +30,6 @@ public class CredentialValidate {
     public static final String OTP_EXPIRED = "El código de verificación ha expirado";
 
     public static final String OTP_SUCCESS = "El código de verificación es correcto";
+
+    public static final String PASSWORD_RECOVERY_SUBJECT = "Recuperación de contraseña";
 }
