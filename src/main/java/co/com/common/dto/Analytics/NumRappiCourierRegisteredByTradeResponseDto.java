@@ -8,7 +8,7 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 @Data
-public class NumRappiCourierRegisteredByTrade {
+public class NumRappiCourierRegisteredByTradeResponseDto {
     private CommerceResponseDto commerce;
     private Long registeredRtCounter;
 }

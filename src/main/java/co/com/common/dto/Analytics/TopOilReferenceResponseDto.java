@@ -12,6 +12,6 @@ import lombok.Data;
 @Data
 public class TopOilReferenceResponseDto {
     private OilReferenceResponseDto oilReference;
-    private ViscosityResponseDto viscosityResponseDto;
+    private ViscosityResponseDto viscosity;
     private Long redemptionCount;
 }

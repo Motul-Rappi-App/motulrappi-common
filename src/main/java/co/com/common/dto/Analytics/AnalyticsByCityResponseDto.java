@@ -1,9 +1,15 @@
 package co.com.common.dto.Analytics;
 
 import co.com.common.dto.Location.LocationResponseDto;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 
 import java.util.List;
 
+@AllArgsConstructor
+@Builder
+@Data
 public class AnalyticsByCityResponseDto {
     private LocationResponseDto location;
     private Float totalLitersSoldRt;
@@ -14,5 +20,5 @@ public class AnalyticsByCityResponseDto {
     private List<TopOilReferenceResponseDto> topOilReferencesByNumberOfSoatRedemptions;
     private List<TopCommercesResponseDto> topCommercesByNumberOfRtRedemptions;
     private List<TopCommercesResponseDto> topCommercesByNumberOfSoatRedemptions;
-    private List<NumRappiCourierRegisteredByTrade> commercesWithNumberOfRtRegistered;
+    private List<NumRappiCourierRegisteredByTradeResponseDto> commercesWithNumberOfRtRegistered;
 }
