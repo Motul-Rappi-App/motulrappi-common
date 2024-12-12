@@ -6,12 +6,13 @@ import java.util.List;
 
 public class AnalyticsByCityResponseDto {
     private LocationResponseDto location;
-    private Float totalLitersRt;
-    private Float totalLitersSoat;
-    private List<TopOilReferenceResponseDto> topFiveOilReferencesRt;
-    private List<TopOilReferenceResponseDto> topFiveOilReferencesSoat;
-    private List<TopCommercesResponseDto> topThreeCommercesRt;
-    private List<TopCommercesResponseDto> topThreeCommercesSoat;
-    private Integer totalRedemptionsRt;
-    private Integer getTotalRedemptionsSoat;
+    private Float totalLitersSoldRt;
+    private Float totalLitersSoldSoat;
+    private Long totalRedemptionsByRt;
+    private Long totalRedemptionsBySoat;
+    private List<TopOilReferenceResponseDto> topOilReferencesByNumberOfRtRedemptions;
+    private List<TopOilReferenceResponseDto> topOilReferencesByNumberOfSoatRedemptions;
+    private List<TopCommercesResponseDto> topCommercesByNumberOfRtRedemptions;
+    private List<TopCommercesResponseDto> topCommercesByNumberOfSoatRedemptions;
+    private List<NumRappiCourierRegisteredByTrade> commercesWithNumberOfRtRegistered;
 }

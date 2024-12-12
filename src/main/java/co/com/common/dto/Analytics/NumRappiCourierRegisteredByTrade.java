@@ -8,7 +8,7 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 @Data
-public class TopCommercesResponseDto {
+public class NumRappiCourierRegisteredByTrade {
     private CommerceResponseDto commerce;
-    private Long redemptionCount;
+    private Long registeredRtCounter;
 }
