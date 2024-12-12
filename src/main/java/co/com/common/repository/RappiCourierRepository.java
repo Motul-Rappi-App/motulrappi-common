@@ -16,9 +16,9 @@ public interface RappiCourierRepository extends JpaRepository<RappiCourier, Long
     boolean existsByRappiToken(String rappiToken);
     boolean existsByMotorcycleId(Long motorcycleId);
 
-    @Query("SELECT rc.commerce.id, rc.commerce.name, rc.commerce.nit, COUNT(rc) " +
+    @Query("SELECT rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, COUNT(rc) " +
             "FROM RappiCourier rc " +
             "WHERE rc.location.id = :locationId " +
-            "GROUP BY rc.commerce.id, rc.commerce.name, rc.commerce.nit")
+            "GROUP BY rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus")
     List<Object[]> countRappiCouriersByCommerceAndLocation(@Param("locationId") Long locationId);
 }
