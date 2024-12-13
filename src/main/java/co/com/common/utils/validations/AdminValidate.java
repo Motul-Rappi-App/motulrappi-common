@@ -21,4 +21,6 @@ public class AdminValidate {
 
 
     public static final String SUPER_ADMIN_NOT_SUPPORTED = "El administrador es superadministrador y no puede acceder a este método";
+    public static final String NO_SUPER_ADMIN_NOT_SUPPORTED = "El administrador no es superadministrador y no puede acceder a este método";
+
 }
