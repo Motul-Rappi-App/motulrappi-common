@@ -29,6 +29,9 @@ public class RappiCourier {
     @Column(name = "rappi_token", length = 100, nullable = false, unique = true)
     private String rappiToken;
 
+    @Column(name = "cell_number", length = 15, nullable = false, unique = true)
+    private String cellNumber;
+
     @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     @JoinColumn(name = "commerce_id")
     private Commerce commerce;

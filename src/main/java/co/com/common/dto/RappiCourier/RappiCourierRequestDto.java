@@ -24,6 +24,10 @@ public class RappiCourierRequestDto {
     @NotBlank(message = RappiCourierValidate.RAPPI_TOKEN_NOT_EMPTY)
     private String rappiToken;
 
+    @NotBlank(message = RappiCourierValidate.CELL_NUMBER_NOT_EMPTY)
+    @Pattern(regexp = RappiCourierValidate.CELL_NUMBER_REGEX, message = RappiCourierValidate.CELL_NUMBER_NOT_VALID)
+    private String cellNumber;
+
     @NotNull(message = RappiCourierValidate.LOCATION_NOT_NULL)
     private Long locationId;
 

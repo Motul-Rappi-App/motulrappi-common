@@ -13,6 +13,11 @@ public class RappiCourierValidate {
     public static final String RAPPI_TOKEN_NOT_EMPTY = "El token del Rappi tendero no puede ser nulo o vacío";
     public static final String RAPPI_TOKEN_ALREADY_EXISTS = "El Rappi ID %s ya se encuentra registrado o ya se usó";
 
+    public static final String CELL_NUMBER_NOT_EMPTY = "El número de celular no puede ser nulo o vacío.";
+    public static final String CELL_NUMBER_NOT_VALID ="El número de celular no es válido, debe tener solo dígitos numéricos, sin caracteres especiales y sin prefijos (+57).";
+    public static final String CELL_NUMBER_REGEX = "^3\\d{9}$";
+    public static final String CELL_NUMBER_ALREADY_EXISTS = "El número de celular ya está registrado.";
+
     public static final String COMMERCE_NOT_NULL = "El comercio del Rappi tendero no puede ser nulo";
     public static final String COMMERCE_NOT_FOUND = "El comercio con ID %s no fue encontrado";
 

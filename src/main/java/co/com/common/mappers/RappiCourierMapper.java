@@ -18,6 +18,7 @@ public class RappiCourierMapper {
                 .identification(rappiCourier.getIdentification())
                 .fullName(rappiCourier.getFullName())
                 .rappiToken(rappiCourier.getRappiToken())
+                .cellNumber(rappiCourier.getCellNumber())
                 .location(LocationMapper.toLocationResponseDto(rappiCourier.getLocation()))
                 .commerce(CommerceMapper.toCommerceResponseDto(rappiCourier.getCommerce()))
                 .motorcycle(MotorcycleMapper.toMotorcycleResponseDto(rappiCourier.getMotorcycle()))
@@ -29,6 +30,7 @@ public class RappiCourierMapper {
         return RappiCourier.builder()
                 .identification(rappiCourierRequestDto.getIdentification())
                 .fullName(rappiCourierRequestDto.getFullName())
+                .cellNumber(rappiCourierRequestDto.getCellNumber())
                 .rappiToken(rappiCourierRequestDto.getRappiToken())
                 .build();
     }
@@ -37,6 +39,7 @@ public class RappiCourierMapper {
         return RappiCourier.builder()
                 .id(rappiCourierUpdateRequestDto.getId())
                 .fullName(rappiCourierUpdateRequestDto.getFullName())
+                .cellNumber(rappiCourierUpdateRequestDto.getCellNumber())
                 .build();
     }
 

@@ -19,6 +19,7 @@ public class RappiCourierResponseDto {
     private String identification;
     private String fullName;
     private String rappiToken;
+    private String cellNumber;
     private LocationResponseDto location;
     private CommerceResponseDto commerce;
     private MotorcycleResponseDto motorcycle;

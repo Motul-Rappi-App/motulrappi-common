@@ -15,6 +15,7 @@ public interface RappiCourierRepository extends JpaRepository<RappiCourier, Long
     RappiCourier findByIdentification(String identification);
     boolean existsByRappiToken(String rappiToken);
     boolean existsByMotorcycleId(Long motorcycleId);
+    boolean existsByCellNumber(String cellNumber);
 
     @Query("SELECT rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, rc.commerce, COUNT(rc) " +
             "FROM RappiCourier rc " +
