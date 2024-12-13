@@ -40,13 +40,13 @@ public interface SoatPromotionalUsesRepository extends JpaRepository<SoatPromoti
             "AND l.id = :locationId")
     Long countSoatRedemptionsByAdminAndLocation(@Param("adminId") Long adminId, @Param("locationId") Long locationId);
 
-    @Query("SELECT c.id, c.nit, c.name, c.personStatus, c.location, c.admin, c.inscriptionDate, COUNT(spu) AS redemptionCount " +
+    @Query("SELECT c.id, c.nit, c.name, c.personStatus, c.location, c.admin, c.inscriptionDate, c.credential,COUNT(spu) AS redemptionCount " +
             "FROM SoatPromotionalUses spu " +
             "JOIN spu.commerce c " +
             "JOIN c.location l " +
             "JOIN c.admin a " +
             "WHERE l.id = :locationId AND a.id = :adminId " +
-            "GROUP BY c.id, c.nit, c.name, c.personStatus, c.location.id, c.admin.id, c.inscriptionDate " +
+            "GROUP BY c.id, c.nit, c.name, c.personStatus, c.location.id, c.admin.id, c.inscriptionDate, c.credential " +
             "ORDER BY redemptionCount DESC")
     List<Object[]> findCommercesByAdminAndLocationForSoatUsesOrderedByRedemptionCount(
             @Param("locationId") Long locationId,

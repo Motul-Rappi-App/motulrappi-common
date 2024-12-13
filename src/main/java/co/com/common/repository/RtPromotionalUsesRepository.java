@@ -37,13 +37,13 @@ public interface RtPromotionalUsesRepository extends JpaRepository<RtPromotional
             "AND l.id = :locationId")
     Long countRtRedemptionsByAdminAndLocation(@Param("adminId") Long adminId, @Param("locationId") Long locationId);
 
-    @Query("SELECT c.id, c.nit, c.name, c.personStatus, c.location, c.admin, c.inscriptionDate, COUNT(rt) AS redemptionCount " +
+    @Query("SELECT c.id, c.nit, c.name, c.personStatus, c.location, c.admin, c.inscriptionDate, c.credential, COUNT(rt) AS redemptionCount " +
             "FROM RtPromotionalUses rt " +
             "JOIN rt.commerce c " +
             "JOIN c.location l " +
             "JOIN c.admin a " +
             "WHERE l.id = :locationId AND a.id = :adminId " +
-            "GROUP BY c.id, c.nit, c.name, c.personStatus, c.location.id, c.admin.id, c.inscriptionDate " +
+            "GROUP BY c.id, c.nit, c.name, c.personStatus, c.location.id, c.admin.id, c.inscriptionDate, c.credential " +
             "ORDER BY redemptionCount DESC")
     List<Object[]> findCommercesByAdminAndLocationForRtOrderedByRedemptionCount(
             @Param("locationId") Long locationId,
