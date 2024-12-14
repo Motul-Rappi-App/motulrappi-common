@@ -36,8 +36,23 @@ public class OilReferenceSoatPromotionMapper {
                 .build();
     }
 
+    public static OilReferenceSoatPromotionResponseDto toOilReferenceWithSoatPromotionResponseDto(OilReferenceSoatPromotion oilReferenceSoatPromotion){
+        return OilReferenceSoatPromotionResponseDto.builder()
+                .id(oilReferenceSoatPromotion.getId())
+                .oilReference(OilReferenceMapper.toOilReferenceResponseDto(oilReferenceSoatPromotion.getOilReference()))
+                .viscosity(ViscosityMapper.toViscosityResponseDto(oilReferenceSoatPromotion.getViscosity()))
+                .litersQuantityUnion(oilReferenceSoatPromotion.getLitersQuantityUnion())
+                .soatPromotion(SoatPromotionalUsesMapper.toSoatPromotionalUsesResponseDto(oilReferenceSoatPromotion.getSoatPromotionUses()))
+                .build();
+    }
+
     public static List<OilReferenceSoatPromotionResponseDto> toOilReferenceSoatPromotionResponseDtoList(List<OilReferenceSoatPromotion> oilReferenceSoatPromotions){
         if(oilReferenceSoatPromotions == null  || oilReferenceSoatPromotions.isEmpty()) return Collections.emptyList();
         return oilReferenceSoatPromotions.stream().map(OilReferenceSoatPromotionMapper::toOilReferenceSoatPromotionResponseDto).collect(Collectors.toList());
+    }
+
+    public static List<OilReferenceSoatPromotionResponseDto> oilReferenceSoatPromotionResponseDtos(List<OilReferenceSoatPromotion> oilReferenceSoatPromotions){
+        if(oilReferenceSoatPromotions == null) return Collections.emptyList();
+        return oilReferenceSoatPromotions.stream().map(OilReferenceSoatPromotionMapper::toOilReferenceWithSoatPromotionResponseDto).collect(Collectors.toList());
     }
 }
