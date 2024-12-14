@@ -48,4 +48,6 @@ public interface RtPromotionalUsesRepository extends JpaRepository<RtPromotional
     List<Object[]> findCommercesByAdminAndLocationForRtOrderedByRedemptionCount(
             @Param("locationId") Long locationId,
             @Param("adminId") Long adminId);
+
+    List<RtPromotionalUses> findAllByCommerce_Location_Id (Long locationId);
 }

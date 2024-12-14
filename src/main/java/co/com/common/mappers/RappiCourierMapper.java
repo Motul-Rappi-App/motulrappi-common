@@ -9,6 +9,8 @@ import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.SliceImpl;
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class RappiCourierMapper {
@@ -46,5 +48,10 @@ public class RappiCourierMapper {
     public static Slice<RappiCourierResponseDto> toRappiCourierResponseDtoSlice(Slice<RappiCourier> rappiCouriers) {
         if (rappiCouriers == null) return new SliceImpl<>(Collections.emptyList());
         return rappiCouriers.map(RappiCourierMapper::toRappiCourierResponseDto);
+    }
+
+    public static List<RappiCourierResponseDto> toRappiCourierResponseDtoList(List<RappiCourier> rappiCouriers) {
+        if (rappiCouriers == null) return Collections.emptyList();
+        return rappiCouriers.stream().map(RappiCourierMapper::toRappiCourierResponseDto).collect(Collectors.toList());
     }
 }

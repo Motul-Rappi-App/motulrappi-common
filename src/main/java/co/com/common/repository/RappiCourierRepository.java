@@ -22,4 +22,6 @@ public interface RappiCourierRepository extends JpaRepository<RappiCourier, Long
             "WHERE rc.location.id = :locationId " +
             "GROUP BY rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, rc.commerce")
     List<Object[]> countRappiCouriersByCommerceAndLocation(@Param("locationId") Long locationId);
+
+    List<RappiCourier> findAllByLocationId(Long locationId);
 }
