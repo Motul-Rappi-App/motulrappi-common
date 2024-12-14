@@ -7,11 +7,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
+
 @AllArgsConstructor
 @Builder
 @Data
 public class ForgotPasswordRequestDto {
-  @NotBlank(message = CredentialValidate.EMAIL_NOT_EMPTY)
-  @Email(message = CredentialValidate.EMAIL_NOT_VALID)
-  private String email;
+    @NotBlank(message = CredentialValidate.EMAIL_NOT_EMPTY)
+    @Email(message = CredentialValidate.EMAIL_NOT_VALID)
+    private String email;
 }

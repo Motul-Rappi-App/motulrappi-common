@@ -7,16 +7,15 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Builder;
 import lombok.Data;
 
+
 @Builder
 @Data
 public class ForgotPasswordUpdateRequestDto {
+    @NotBlank(message = AuthenticationValidate.PASSWORD_NOT_EMPTY)
+    @Pattern(regexp = AuthenticationValidate.PASSWORD_REGEX, message = AuthenticationValidate.PASSWORD_NOT_VALID)
+    private String password;
 
-  @NotBlank(message = AuthenticationValidate.PASSWORD_NOT_EMPTY)
-  @Pattern(regexp = AuthenticationValidate.PASSWORD_REGEX, message = AuthenticationValidate.PASSWORD_NOT_VALID)
-  private String password;
-
-  @NotBlank(message = AuthenticationValidate.PASSWORD_NOT_EMPTY)
-  @Pattern(regexp = AuthenticationValidate.PASSWORD_REGEX, message = AuthenticationValidate.PASSWORD_NOT_VALID)
-  private String confirmPassword;
-
+    @NotBlank(message = AuthenticationValidate.PASSWORD_NOT_EMPTY)
+    @Pattern(regexp = AuthenticationValidate.PASSWORD_REGEX, message = AuthenticationValidate.PASSWORD_NOT_VALID)
+    private String confirmPassword;
 }

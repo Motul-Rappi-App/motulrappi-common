@@ -48,7 +48,5 @@ public interface SoatPromotionalUsesRepository extends JpaRepository<SoatPromoti
             "WHERE l.id = :locationId AND a.id = :adminId " +
             "GROUP BY c.id, c.nit, c.name, c.personStatus, c.location.id, c.admin.id, c.inscriptionDate, c.credential " +
             "ORDER BY redemptionCount DESC")
-    List<Object[]> findCommercesByAdminAndLocationForSoatUsesOrderedByRedemptionCount(
-            @Param("locationId") Long locationId,
-            @Param("adminId") Long adminId);
+    List<Object[]> findCommercesByAdminAndLocationForSoatUsesOrderedByRedemptionCount(@Param("locationId") Long locationId, @Param("adminId") Long adminId);
 }

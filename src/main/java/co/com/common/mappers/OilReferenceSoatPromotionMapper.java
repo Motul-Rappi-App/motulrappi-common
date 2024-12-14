@@ -1,15 +1,9 @@
 package co.com.common.mappers;
 
-import co.com.common.domain.OilReference;
 import co.com.common.domain.OilReferenceSoatPromotion;
 import co.com.common.domain.SoatPromotionalUses;
-import co.com.common.domain.Viscosity;
 import co.com.common.dto.OilReferenceSoatPromotion.OilReferenceSoatPromotionCreateDto;
-import co.com.common.dto.OilReferenceSoatPromotion.OilReferenceSoatPromotionRequestDto;
 import co.com.common.dto.OilReferenceSoatPromotion.OilReferenceSoatPromotionResponseDto;
-
-import org.springframework.data.domain.Slice;
-import org.springframework.data.domain.SliceImpl;
 
 import java.util.Collections;
 import java.util.List;
@@ -17,7 +11,6 @@ import java.util.stream.Collectors;
 
 
 public class OilReferenceSoatPromotionMapper {
-
     public static OilReferenceSoatPromotion toOilReferenceSoatPromotion(OilReferenceSoatPromotionCreateDto oilReferenceSoatPromotionCreateDto, SoatPromotionalUses soatPromotionalUses){
         return OilReferenceSoatPromotion.builder()
                 .oilReference(oilReferenceSoatPromotionCreateDto.getOilReference())

@@ -14,7 +14,6 @@ import lombok.Data;
 @Builder
 @Data
 public class OilReferenceRequestDto {
-
     @NotBlank(message = OilReferenceValidate.NAME_NOT_EMPTY)
     private String name;
 

@@ -1,7 +1,7 @@
 package co.com.common.utils.validations;
 
-
 import java.time.LocalDateTime;
+
 
 public class ValidatePromotionValidation {
     public static final String IDENTIFICATION_NOT_EMPTY = "La identificación no puede ser nula o vacía";
@@ -21,5 +21,6 @@ public class ValidatePromotionValidation {
 
     public static final String SAVE_IN_RT_PROMOTION_USES = "RT_PROMOTION_USES";
     public static final String SAVE_IN_SOAT_PROMOTION_USES = "SOAT_PROMOTION_USES";
+
     public static final String SEND_OPTION_TO_CREATE_RT = "CREATE_RT";
 }

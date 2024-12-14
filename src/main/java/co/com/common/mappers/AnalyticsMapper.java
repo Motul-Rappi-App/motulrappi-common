@@ -7,8 +7,8 @@ import co.com.common.dto.Analytics.NumRappiCourierRegisteredByTradeResponseDto;
 import co.com.common.dto.Analytics.TopCommercesResponseDto;
 import co.com.common.dto.Analytics.TopOilReferenceResponseDto;
 
-public class AnalyticsMapper {
 
+public class AnalyticsMapper {
     public static TopCommercesResponseDto toTopCommercesResponseDto(Commerce commerce, Long redemptionCount) {
         return TopCommercesResponseDto.builder()
                 .commerce(CommerceMapper.toCommerceResponseDto(commerce))
