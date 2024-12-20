@@ -8,6 +8,8 @@ import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.SliceImpl;
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class RtPromotionalUsesMapper {
@@ -30,7 +32,12 @@ public class RtPromotionalUsesMapper {
     }
 
     public static Slice<RtPromotionalUsesResponseDto> toRtPromotionalUsesResponseDtoSlice(Slice<RtPromotionalUses> rtPromotionalUses){
-        if(rtPromotionalUses == null ) return new SliceImpl<>(Collections.emptyList());
+        if (rtPromotionalUses == null) return new SliceImpl<>(Collections.emptyList());
         return rtPromotionalUses.map(RtPromotionalUsesMapper::toRtPromotionalUsesResponseDto);
+    }
+
+    public static List<RtPromotionalUsesResponseDto> toRtPromotionalUsesResponseDtoList(List<RtPromotionalUses> rtPromotionalUses){
+        if (rtPromotionalUses == null) return Collections.emptyList();
+        return rtPromotionalUses.stream().map(RtPromotionalUsesMapper::toRtPromotionalUsesResponseDto).collect(Collectors.toList());
     }
 }

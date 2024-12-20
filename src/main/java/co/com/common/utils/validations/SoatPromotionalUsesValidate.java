@@ -15,10 +15,9 @@ public class SoatPromotionalUsesValidate {
     public static final String QUANTITY_LITERS_INVALID = "El campo quantityLiters es inválido (debe ser 1 o 2)";
 
     public static final String OIL_REFERENCES_NOT_NULL = "Debe enviar la lista de productos seleccionados";
-    public static final String VISCOSITY_NOT_NULL = "Cada aceite debe tener al menos una viscosidad asociada";
     public static final String OIL_REFERENCE_NOT_NULL = "No se encuentra la referencia seleccionada";
-
-
     public static final String OIL_REFERENCE_NOT_FOUND = "No se encuentra la referencia seleccionada";
+
+    public static final String VISCOSITY_NOT_NULL = "Cada aceite debe tener al menos una viscosidad asociada";
     public static final String VISCOSITY_NOT_FOUND = "No se encuentra la viscosidad seleccionada";
 }

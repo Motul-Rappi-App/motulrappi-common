@@ -12,7 +12,6 @@ import lombok.Data;
 @Builder
 @Data
 public class RtPromotionalUsesRequestDto {
-
     @NotNull(message = RtPromotionalUsesValidate.COMMERCE_ID_NOT_NULL)
     private Long commerceId;
 

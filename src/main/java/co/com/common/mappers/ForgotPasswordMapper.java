@@ -8,8 +8,8 @@ import co.com.common.domain.ForgotPassword;
 
 import java.util.Date;
 
-public class ForgotPasswordMapper {
 
+public class ForgotPasswordMapper {
     public static ForgotPasswordResponseDto toResponseDto(String message) {
         return new ForgotPasswordResponseDto(message);
     }
