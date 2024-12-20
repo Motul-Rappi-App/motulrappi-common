@@ -21,4 +21,7 @@ public class MotorcycleValidate {
     public static final String REFERENCE_NOT_EMPTY = "La referencia de la moto no puede ser nula o vacía";
 
     public static final String MOTORCYCLE_NOT_FOUND = "La moto con ID %s no fue encontrada";
+
+
+    public static final String CAPTCHA_NOT_VALID = "No se pudo validar el captcha";
 }
