@@ -15,7 +15,7 @@ public class ValidatePromotionValidation {
 
     public static final long RT_PROMOTION_DAYS_MIN = 10;
     public static final String RT_PROMOTION_VALID_FIRST_USE = "Felicitaciones al Rappi Tendero por su primera vez usando la promoción. Es apto para recibir un descuento del 10%%";
-    public static final String RT_PROMOTION_VALID_WITH_TIME = "Felicitaciones, puede redimir la promoción de nuevo en %s días. Aplica para un descuento del 10%% ";
+    public static final String RT_PROMOTION_VALID_WITH_TIME = "Felicitaciones, puede redimir la promoción de nuevo en %s días. Aplica para un descuento del 10%%";
     public static final String RT_PROMOTION_INVALID_WITH_TIME = "No aplica para promoción; no han pasado %s días desde el último uso, la última vez fue el día %s";
     public static final String RT_PROMOTION_ERROR_WITH_DATE = "Error al obtener fechas del uso de la promoción";
 
