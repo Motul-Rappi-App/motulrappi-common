@@ -8,7 +8,7 @@ public class RappiCourierValidate {
 
     public static final String FULL_NAME_NOT_EMPTY = "El nombre del Rappi tendero no puede ser nulo o vacío";
     public static final String FULL_NAME_NOT_VALID = "El nombre del Rappi tendero no es válido, solo puede contener letras";
-    public static final String FULL_NAME_REGEX = "^[a-zA-Z ]{3,50}$";
+    public static final String FULL_NAME_REGEX = "^[A-Za-zÁÉÍÓÚáéíóúÑñ\\s]+$";
 
     public static final String RAPPI_TOKEN_NOT_EMPTY = "El token del Rappi tendero no puede ser nulo o vacío";
     public static final String RAPPI_TOKEN_ALREADY_EXISTS = "El Rappi ID %s ya se encuentra registrado o ya se usó";
