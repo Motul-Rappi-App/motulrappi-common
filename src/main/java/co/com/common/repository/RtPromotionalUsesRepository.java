@@ -1,5 +1,6 @@
 package co.com.common.repository;
 
+import co.com.common.domain.RappiCourier;
 import co.com.common.domain.RtPromotionalUses;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -48,4 +49,18 @@ public interface RtPromotionalUsesRepository extends JpaRepository<RtPromotional
     List<Object[]> findCommercesByAdminAndLocationForRtOrderedByRedemptionCount(@Param("locationId") Long locationId, @Param("adminId") Long adminId);
 
     List<RtPromotionalUses> findAllByCommerce_Location_Id (Long locationId);
+
+        @Query(value = "SELECT rc.* " +
+                "FROM rappi_couriers rc " +
+                "LEFT JOIN ( " +
+                "SELECT rappi_courier_id, MAX(inscription_date) AS last_use_date " +
+                "FROM rt_promotional_uses " +
+                "GROUP BY rappi_courier_id" +
+                ") rpu ON rc.id = rpu.rappi_courier_id " +
+                "WHERE " +
+                "(CURRENT_DATE - COALESCE(rpu.last_use_date::date, rc.inscription_date::date)) % 15 = 0 " +
+                "AND " +
+                "(CURRENT_DATE - COALESCE(rpu.last_use_date::date, rc.inscription_date::date)) >= 15 "
+                , nativeQuery = true)
+        List<Object[]> findRappiCouriersWithRedemptionDays();
 }
