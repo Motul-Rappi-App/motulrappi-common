@@ -18,6 +18,7 @@ public class RappiCourierResponseDto {
     private Long id;
     private String identification;
     private String fullName;
+    private String email;
     private String rappiToken;
     private String cellNumber;
     private LocationResponseDto location;

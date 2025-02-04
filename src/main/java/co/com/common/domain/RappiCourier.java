@@ -26,6 +26,9 @@ public class RappiCourier {
     @Column(name = "full_name", length = 50, nullable = false)
     private String fullName;
 
+    @Column(length = 100, nullable = false, unique = true)
+    private String email;
+
     @Column(name = "rappi_token", length = 100, nullable = false, unique = true)
     private String rappiToken;
 

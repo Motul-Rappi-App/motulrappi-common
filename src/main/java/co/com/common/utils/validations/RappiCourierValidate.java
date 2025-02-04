@@ -33,4 +33,8 @@ public class RappiCourierValidate {
     public static final String RAPPI_COURIER_NOT_FOUND_BY_IDENTIFICATION = "El Rappi tendero con cédula %s no fue encontrado";
 
     public static final String CAPTCHA_NOT_VALID = "No se pudo validar el captcha";
+
+    public static final String EMAIL_NOT_EMPTY = "El correo electrónico no puede ser nulo o vacío";
+    public static final String EMAIL_NOT_VALID = "El correo electrónico no es válido";
+    public static final String EMAIL_ALREADY_EXISTS = "El correo electrónico %s ya existe";
 }

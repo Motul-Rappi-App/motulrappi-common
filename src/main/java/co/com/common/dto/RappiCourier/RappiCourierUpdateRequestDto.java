@@ -1,7 +1,9 @@
 package co.com.common.dto.RappiCourier;
 
+import co.com.common.utils.validations.CredentialValidate;
 import co.com.common.utils.validations.RappiCourierValidate;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -20,6 +22,10 @@ public class RappiCourierUpdateRequestDto {
     @NotBlank(message = RappiCourierValidate.FULL_NAME_NOT_EMPTY)
     @Pattern(regexp = RappiCourierValidate.FULL_NAME_REGEX, message = RappiCourierValidate.FULL_NAME_NOT_VALID)
     private String fullName;
+
+    @NotBlank(message = CredentialValidate.EMAIL_NOT_EMPTY)
+    @Email(message = CredentialValidate.EMAIL_NOT_VALID)
+    private String email;
 
     @NotBlank(message = RappiCourierValidate.CELL_NUMBER_NOT_EMPTY)
     @Pattern(regexp = RappiCourierValidate.CELL_NUMBER_REGEX, message = RappiCourierValidate.CELL_NUMBER_NOT_VALID)
