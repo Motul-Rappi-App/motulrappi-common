@@ -18,10 +18,10 @@ public interface RappiCourierRepository extends JpaRepository<RappiCourier, Long
     boolean existsByCellNumber(String cellNumber);
     boolean existsByEmail(String email);
 
-    @Query("SELECT rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, rc.commerce, COUNT(rc) " +
+    @Query("SELECT rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, rc.commerce, rc.email, COUNT(rc) " +
             "FROM RappiCourier rc " +
             "WHERE rc.location.id = :locationId " +
-            "GROUP BY rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, rc.commerce")
+            "GROUP BY rc.commerce.id, rc.commerce.name, rc.commerce.nit, rc.commerce.personStatus, rc.commerce, rc.email")
     List<Object[]> countRappiCouriersByCommerceAndLocation(@Param("locationId") Long locationId);
 
     List<RappiCourier> findAllByLocationId(Long locationId);
